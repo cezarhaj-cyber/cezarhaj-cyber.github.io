@@ -126,7 +126,15 @@ def stats():
         f'<li><strong>{esc(n)}</strong>{bi(r, e)}</li>' for n, r, e in STATS) + "</ul>"
 
 
-NAV = [("profile", "Profil", "Profile"), ("experience", "Experiență", "Experience"),
+def areas():
+    items = "".join(
+        f'<li class="area{" lead-area" if i == 0 else ""}"><span class="num">{i + 1:02d}</span>'
+        f'<h3>{bi(t_ro, t_en)}</h3>{bi(x_ro, x_en, tag="p")}</li>'
+        for i, (t_ro, t_en, x_ro, x_en) in enumerate(AREAS))
+    return f'<ol class="areas">{items}</ol>'
+
+
+NAV = [("profile", "Profil", "Profile"), ("expertise", "Expertiză", "Expertise"), ("experience", "Experiență", "Experience"),
        ("education", "Educație", "Education"), ("roles", "Roluri internaționale", "International roles"),
        ("skills", "Competențe", "Skills"), ("publications", "Publicații", "Publications")]
 
@@ -170,6 +178,11 @@ h3{font-size:1.02rem;line-height:1.4;margin:0 0 4px}
 .stats strong{display:block;font-family:"Source Serif 4",Georgia,serif;font-size:1.6rem;color:var(--accent);line-height:1.2;margin-bottom:2px}
 .callout{background:var(--card);border-left:3px solid var(--accent2);padding:12px 16px;border-radius:0 8px 8px 0;margin:16px 0}
 .callout p{margin:4px 0}
+.areas{list-style:none;padding:0;margin:16px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.area{position:relative;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px 14px 52px}
+.area .num{position:absolute;left:16px;top:14px;font-family:"Source Serif 4",Georgia,serif;font-weight:600;color:var(--accent2);font-size:1.05rem}
+.area p{margin:0;font-size:.92rem;color:#333c49}
+.area.lead-area{grid-column:1/-1;border-left:4px solid var(--accent2);background:#fffaf4}
 .job{display:grid;grid-template-columns:170px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
 .job:first-of-type{border-top:0}
 .when{font-size:.88rem;color:var(--muted);font-weight:600;line-height:1.4}
@@ -202,6 +215,8 @@ tbody th{text-align:left}
 h3.sub{font-size:1.05rem;margin:24px 0 8px;color:var(--ink)}
 footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:.85rem}
 @media (max-width:720px){
+  .areas{grid-template-columns:1fr}
+  h2{scroll-margin-top:96px}
   .stats{grid-template-columns:1fr 1fr}
   .job,.roles li{grid-template-columns:1fr;gap:4px}
   .skills{grid-template-columns:1fr}
@@ -214,7 +229,8 @@ footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);f
   header.top a{color:var(--ink)}
   h1{color:var(--accent)}
   .tools,nav.toc,footer .src{display:none}
-  .stats li,.skill{border-color:#ccc}
+  .stats li,.skill,.area{border-color:#ccc}
+  .area{break-inside:avoid}
   .job,.roles li,.skill,.pubs li{break-inside:avoid}
   h2{break-after:avoid}
   a{color:var(--ink);text-decoration:none}
@@ -289,10 +305,11 @@ def page():
     {h2("Profil", "Profile", "profile")}
     {bi(*PROFILE, tag="p", cls="lead")}
     {stats()}
-    <div class="callout">
-      <p><strong>{bi("Domenii de expertiză", "Areas of expertise")}:</strong> {bi(*EXPERTISE)}</p>
-      <p><strong>{bi("Experiență de evaluator", "Evaluation experience")}:</strong> {bi(*EVAL_EXP)}</p>
-    </div>
+  </section>
+  <section>
+    {h2("Domenii de expertiză", "Areas of expertise", "expertise")}
+    {bi(*EXPERTISE_INTRO, tag="p")}
+    {areas()}
   </section>
   <section>
     {h2("Experiență profesională", "Professional experience", "experience")}
@@ -320,7 +337,7 @@ def page():
   </section>
 </main>
 <footer>
-  <div class="wrap">{bi("Actualizat: iulie 2026", "Last updated: July 2026")} · Mihai Cezar Hâj</div>
+  <div class="wrap">{bi("Actualizat: noiembrie 2026", "Last updated: November 2026")} · Mihai Cezar Hâj</div>
 </footer>
 <script>{JS}</script>
 </body>

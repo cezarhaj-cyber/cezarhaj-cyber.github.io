@@ -28,14 +28,38 @@ PROFILE = (
     "Public-sector and education-policy expert with more than 15 years of experience designing, implementing and evaluating policies, strategies, programmes, projects and research — for the World Bank, the European Commission, the Council of Europe and Romanian public authorities (UEFISCDI). As a World Bank short-term consultant he has focused on digital skills and competences: he co-authored DigComp Romania – the general digital competence framework for Romanian citizens (adopted into national law by Government Emergency Ordinance 27/2025) and DigComp PA – the framework for civil servants, and he advises on integrating artificial intelligence into public-administration training and into education. His work supported the certification of more than 1,000 librarian-trainers and the training of more than 50,000 citizens in basic digital skills. He holds a PhD in Political Science (equity in higher education), is a member of the Bologna Follow-Up Group (BFUG) and co-chair of the EHEA Working Group on Fundamental Values, and has twice served as adviser to the Minister of Education.",
 )
 
-EXPERTISE = (
-    "Proiectarea, implementarea și evaluarea politicilor, strategiilor, programelor, proiectelor și cercetărilor în: educație (preuniversitară, învățământ superior, învățare pe tot parcursul vieții), tineret, digitalizare, cercetare, inovare, antreprenoriat și asistență socială.",
-    "Designing, implementing and evaluating policies, strategies, programmes, projects and research in: education (school education, higher education, lifelong learning), youth, digitalisation, research, innovation, entrepreneurship and social assistance.",
+EXPERTISE_INTRO = (
+    "Proiectarea, implementarea și evaluarea politicilor, strategiilor, programelor, proiectelor și cercetărilor în educație (preuniversitară, învățământ superior, învățare pe tot parcursul vieții), tineret, digitalizare, cercetare, inovare, antreprenoriat și asistență socială.",
+    "Designing, implementing and evaluating policies, strategies, programmes, projects and research in education (school education, higher education, lifelong learning), youth, digitalisation, research, innovation, entrepreneurship and social assistance.",
 )
-EVAL_EXP = (
-    "Peste 10 proiecte de evaluare a unor politici și programe de dezvoltare socio-economică (FSE/POCU, Erasmus+, Corpul European de Solidaritate, PNRR, programe naționale de sprijin social și politici educaționale), incluzând evaluări de impact, evaluări contrafactuale și evaluări cu metode mixte pentru Comisia Europeană, Banca Mondială și autorități naționale.",
-    "More than 10 evaluations of socio-economic development policies and programmes (ESF/Human Capital OP, Erasmus+, European Solidarity Corps, Recovery and Resilience Plan, national social-support programmes and education policies), including impact, counterfactual and mixed-methods evaluations for the European Commission, the World Bank and national authorities.",
-)
+
+# (title_ro, title_en, text_ro, text_en)
+AREAS = [
+    ("Evaluarea programelor și proiectelor", "Programme and project evaluation",
+     "Evaluare ex-ante, intermediară și ex-post (finală) a politicilor publice, programelor și proiectelor, inclusiv evaluare contrafactuală a impactului, evaluare cu metode mixte și evaluare bazată pe teorie — FSE/POCU, Erasmus+, Corpul European de Solidaritate, PNRR și programe naționale de sprijin social și politici educaționale. Peste 10 evaluări pentru Comisia Europeană, Banca Mondială și autorități naționale.",
+     "Ex-ante, interim (mid-term) and final / ex-post evaluation of public policies, programmes and projects, including counterfactual impact evaluation (CIE), mixed-methods and theory-based evaluation — ESF/Human Capital OP, Erasmus+, European Solidarity Corps, the Recovery and Resilience Plan and national social-support and education programmes. More than 10 evaluations for the European Commission, the World Bank and national authorities."),
+    ("Politici în învățământul superior · Procesul Bologna / SEÎS", "Higher education policy · Bologna Process / EHEA",
+     "Echitate și dimensiune socială, valori fundamentale, internaționalizare, asigurarea calității, sisteme de admitere și studii doctorale; membru BFUG din 2015.",
+     "Equity and the social dimension, fundamental values, internationalisation, quality assurance, admission systems and doctoral education; BFUG member since 2015."),
+    ("Monitorizarea inserției absolvenților și sisteme de date în educație", "Graduate tracking and education data systems",
+     "EUROGRADUATE, studii privind angajabilitatea absolvenților, chestionarul național studențesc, sisteme de colectare a datelor, platforme și indicatori pentru fundamentarea deciziilor.",
+     "EUROGRADUATE, graduate-employability studies, national student surveys, data-collection systems, platforms and indicators for evidence-based decisions."),
+    ("Competențe digitale și IA în educație și administrația publică", "Digital skills and AI in education and public administration",
+     "DigComp RO, DigComp PA, DigCompEdu; integrarea responsabilă a inteligenței artificiale în educație și în formarea din administrația publică, în acord cu Regulamentul UE privind IA (AI Act) și GDPR.",
+     "DigComp RO, DigComp PA, DigCompEdu; responsible integration of AI in education and public-administration training, in line with the EU AI Act and the GDPR."),
+    ("Finanțarea educației", "Education finance",
+     "Formule de finanțare și costul standard per elev, opțiuni de costuri simplificate (OCS), analiză bugetară și evaluarea ex-ante a prevederilor de finanțare din legislația educației.",
+     "Funding formulas and the per-student standard cost, simplified cost options (SCO), budget analysis and ex-ante assessment of the funding provisions of education legislation."),
+    ("Programarea fondurilor europene și asistență tehnică", "EU funds programming and technical assistance",
+     "Programarea 2021–2027 (Programul Operațional Educație și Ocupare), logica intervenției, indicatori de realizare și de rezultat, alocări.",
+     "2021–2027 programming (Education and Employment Operational Programme), intervention logic, output and result indicators, allocations."),
+    ("Managementul proiectelor finanțate din fonduri europene", "Management of large EU-funded projects",
+     "Management de proiect și de pachete de lucru pentru proiecte finanțate din FSE și de Comisia Europeană, cu echipe de aprox. 120 de experți și bugete de 2,2–2,4 milioane EUR.",
+     "Project and work-package management for ESF- and European Commission-funded projects, with teams of about 120 experts and budgets of EUR 2.2–2.4 million."),
+    ("Alte sectoare", "Other sectors",
+     "Politici de tineret și dialog structurat, standarde de calitate și de cost pentru serviciile de asistență socială, politici de cercetare-dezvoltare și inovare, antreprenoriat.",
+     "Youth policy and structured dialogue, quality and cost standards for social-assistance services, research, development and innovation policy, entrepreneurship."),
+]
 
 EXPERIENCE = [
     E("2025-08", "August 2025 – Prezent", "August 2025 – Present",
@@ -209,6 +233,14 @@ EXPERIENCE = [
       "Administrația Prezidențială, București", "Presidential Administration, Bucharest", None,
       "Învățământ preuniversitar, evaluare de politici, finanțare, cercetare, dezvoltare de politici",
       "School education, policy evaluation, funding, research, policy development"),
+
+    E("2020-11", "Noiembrie 2020 – Ianuarie 2021", "November 2020 – January 2021",
+      "Expert (consultant)", "Expert (consultant)",
+      "Dezvoltarea unei opțiuni de costuri simplificate (OCS) pentru serviciile de creșă (educație antepreșcolară), pentru utilizare în cadrul Programului Operațional Educație și Ocupare (POEO) 2021–2027.",
+      "Developed a simplified cost option (SCO) for nursery (early-childhood) services for use under the Education and Employment Operational Programme 2021–2027.",
+      ARCH_RO, ARCH_EN, None,
+      "Fonduri europene, asistență tehnică, educație timpurie, evaluare de programe",
+      "EU funds, technical assistance, early-childhood education, programme evaluation"),
 
     E("2020-07", "Iulie 2020 – Decembrie 2020", "July 2020 – December 2020",
       "Expert evaluator pentru intervenții educaționale finanțate din fonduri UE", "Evaluation expert for EU-funded education interventions",
@@ -488,12 +520,17 @@ LANGS = [("Engleză", "English", ["C2", "C2", "C2", "C2", "C1"]),
 
 # Publications: (citation_html, [urls])
 BOOKS = [
+    ("Hâj, C. M., Deaconu, Ș.-M., Lupescu, D., Horobeanu, G.-D., Sukonthotok-Udrea, E.-M., &amp; Croitoru, A. (2026). <i>De la universitate la piața muncii: Studiul privind angajabilitatea absolvenților de învățământ superior din România (2026)</i> (ISBN 978-606-95918-8-8). UEFISCDI Publishing House.", ["https://editura.uefiscdi.ro/73-de-la-universitate-la-piata-muncii-studiul-privind-angajabilitatea-absolventilor-de-invatamant-superior-din-romania-2026"]),
     ("Curaj, A., Pricopie, R., &amp; Hâj, C. M. (Eds.). (2025). <i>European Higher Education Area 2030: Bridging realities for tomorrow's higher education</i>. Springer.", ["https://link.springer.com/book/10.1007/978-3-031-75140-0"]),
     ("Curaj, A., &amp; Hâj, C. M. (2025). Bologna Process in the era of digital transformations and new EU initiatives. In <i>European Higher Education Area 2030: Bridging realities for tomorrow's higher education</i>. Springer.", ["https://link.springer.com/chapter/10.1007/978-3-031-75140-0_28"]),
     ("European Education and Culture Executive Agency, Curaj, A., &amp; Hâj, C. (Eds.). (2025). <i>Driving digital transformation in education: Innovative practices from the EU</i>. Publications Office of the European Union.", ["https://data.europa.eu/doi/10.2797/9398200"]),
+    ("Deaconu, Ș.-M., &amp; Hâj, C. M. (2024). <i>România: Raport național EUROGRADUATE 2022 – A doua etapă a studiului pilot desfășurat la nivel european privind absolvenții de învățământ superior</i> (ISBN 978-606-95918-0-2). UEFISCDI Publishing House.", ["https://editura.uefiscdi.ro/46-romania-raport-national-eurograduate-2022-a-doua-etapa-a-studiului-pilot-desfasurat-la-nivel-european-privind-absolventii-de"]),
     ("European Education and Culture Executive Agency, Curaj, A., &amp; Hâj, C. (Eds.). (2023). <i>Framing the European way for the digital decade: Inspiring practices in digital education across the EU</i>. Publications Office of the European Union.", ["https://data.europa.eu/doi/10.2797/023365"]),
     ("Hâj, C. M., Deaconu, Ș.-M., Fiț, C.-R., Frunzaru, V., Geanta, I., Olah, R., Păunescu, M., &amp; Ghiuță, O. (2023). <i>Studiu de impact. Implementarea programului de masterat didactic</i> (ISBN 978-606-95687-0-5). UEFISCDI Publishing House.", ["https://editura.uefiscdi.ro/35-studiu-de-impact-implementarea-programului-de-masterat-didactic-impactul-asupra-politicii-de-formare-initiala-a-personalului"]),
     ("Hâj, C. M., Alexe-Coteț, D., &amp; Păunescu, M. (2022). <i>Abandonul în învățământul superior românesc. Definire, măsurare, interpretare</i> (ISBN 978-606-95508-8-5). UEFISCDI Publishing House.", ["https://editura.uefiscdi.ro/6-abandonul-in-invatamantul-superior-romanesc-definire-masurare-interpretare"]),
+    ("Hâj, C. M. (2022). <i>Catalogue of higher education institutions in Romania</i> (ISBN 978-606-95508-1-6). UEFISCDI Publishing House.", ["https://editura.uefiscdi.ro/9-catalogue-of-higher-education-institutions-in-romania"]),
+    ("Mihuț, G., Alexe-Coteț, D., Hâj, C. M., Bădescu, G., Lupescu, D., Iftimescu, S., Stîngu, M., Santa, R., Stăvaru, A.-M., Ivan, M., Petcu, A., Frunzaru, V., Oprea, D., &amp; Ștefăniță, O. (2022). <i>Cadru de politică publică privind îmbunătățirea accesului, a participării și a absolvirii în învățământul superior din România</i> (ISBN 978-606-95508-4-7). UEFISCDI Publishing House.", ["https://editura.uefiscdi.ro/4-cadru-de-politica-publica-privind-imbunatatirea-accesului-a-participarii-si-a-absolvirii-in-invatamantul-superior-din-romania"]),
+    ("Alexe-Coteț, D., Țucă, P., &amp; Hâj, C. M. (2022). <i>Accesul în învățământul superior – o perspectivă cantitativă. Analiză a tranziției generației școlare 2017/2018 în primul an universitar 2018/2019</i> (ISBN 978-606-95508-7-8). UEFISCDI Publishing House.", ["https://editura.uefiscdi.ro/27-accesul-in-invatamantul-superior-o-perspectiva-cantitativa-analiza-a-tranzitiei-generatiei-scolare-2017-2018-in-primul-an-uni"]),
     ("Curaj, A., Salmi, J., &amp; Hâj, C. M. (Eds.). (2022). <i>Higher education in Romania: Overcoming challenges and embracing opportunities</i>. Springer.", ["https://link.springer.com/book/10.1007/978-3-030-94496-4"]),
     ("Hâj, C. M., &amp; Țucă, P. L. (2022). Access to higher education: Losing precious human resources before the start line. In A. Curaj, J. Salmi, &amp; C. M. Hâj (Eds.), <i>Higher education in Romania: Overcoming challenges and embracing opportunities</i>. Springer.", ["https://link.springer.com/chapter/10.1007/978-3-030-94496-4_3"]),
     ("Cismaru, D.-M., Corbu, N., Frunzaru, V., Hâj, C. M., &amp; Ștefăniță, O. (2022). The impact of social scholarships and of reserved places for graduates from rural high schools in improving access to higher education and academic performance. In <i>Higher education in Romania: Overcoming challenges and embracing opportunities</i>. Springer.", ["https://link.springer.com/chapter/10.1007/978-3-030-94496-4_4"]),
@@ -534,7 +571,6 @@ REPORTS = [
     ("Stăvaru, A.-M., Irimia, A., &amp; Hâj, C. M. (Coord.). (2021). <i>Analiza actelor normative în vigoare din domeniul învățământului superior, cu evidențierea zonelor nereglementate, a interdependențelor și suprapunerilor</i>. UEFISCDI.", ["https://uefiscdi.gov.ro/noi-perspective-in-educatie-npe"]),
     ("Deaconu, Ș.-M., &amp; Hâj, C. M. (2021). <i>Raport privind asumările României la nivel internațional privind implementarea Procesului Bologna</i>. UEFISCDI.", ["https://uefiscdi.gov.ro/noi-perspective-in-educatie-npe"]),
     ("Deaconu, Ș.-M., &amp; Hâj, C. M. (2021). <i>Raport privind utilizarea sistemelor informatice și a datelor în procesele decizionale în învățământul superior</i>. UEFISCDI.", ["https://uefiscdi.gov.ro/noi-perspective-in-educatie-npe"]),
-    ("Hâj, C. M., Țucă, P., &amp; Alexe-Coteț, D. (2021). <i>Access to higher education: A quantitative analysis. Transition of the 2017/2018 school generation into the first academic year 2018/2019</i>. UEFISCDI.", ["https://uefiscdi.gov.ro/Publicatii-1"]),
     ("Haj, C. M., Popa, N., Fiț, C.-R., Geanta, I., Marin, A., Deaconu, M., &amp; Olah, R. (2021). <i>Internationalisation of higher education in Romania: Student mobilities (incoming and outgoing) 2014/2015–2018/2019</i> (Policy Brief No. 5/2021). UEFISCDI &amp; ANPCDEFP.", ["https://uefiscdi.gov.ro/Publicatii-1"]),
     ("Hâj, C. M., Fiț, C.-R., Geanta, I., Marin, A., Deaconu, M., &amp; Olah, R. (2021). <i>Internationalisation of higher education in Romania: Statistical data for public HEIs 2017/2018–2019/2020</i> (Policy Brief No. 4/2021). UEFISCDI.", ["https://uefiscdi.gov.ro/Publicatii-1"]),
     ("Haj, C. M. (2021). <i>Need-based scholarships in the Romanian higher-education system: Legal framework and awarding procedures 2014–2019</i> (Policy Brief No. 3/2021). UEFISCDI.", ["https://uefiscdi.gov.ro/Publicatii-1"]),
