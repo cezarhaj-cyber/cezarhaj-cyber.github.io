@@ -115,10 +115,17 @@ def pubs(items):
 
 STATS = [
     ("15+", "ani de experiență în politici publice", "years in public policy"),
-    ("50,000+", "cetățeni formați în competențe digitale", "citizens trained in digital skills"),
-    ("47", "sisteme de învățământ superior monitorizate (SEÎS)", "higher education systems monitored (EHEA)"),
     ("310", "citări · indice h 12 (Google Scholar, iun. 2026)", "citations · h-index 12 (Google Scholar, Jun 2026)"),
 ]
+
+
+def profile():
+    out = []
+    for l_ro, l_en, t_ro, t_en in PROFILE:
+        ro = (f"<strong>{esc(l_ro)}</strong> " if l_ro else "") + esc(t_ro)
+        en = (f"<strong>{esc(l_en)}</strong> " if l_en else "") + esc(t_en)
+        out.append(bi(ro, en, tag="p", cls="lead", raw=True))
+    return "\n    ".join(out)
 
 
 def stats():
@@ -172,8 +179,9 @@ main{padding:12px 0 64px}
 section{padding-top:28px}
 h2{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:1.55rem;color:var(--accent);margin:24px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--line);scroll-margin-top:60px}
 h3{font-size:1.02rem;line-height:1.4;margin:0 0 4px}
-.lead{font-size:1.06rem}
-.stats{list-style:none;padding:0;margin:24px 0 8px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.lead{font-size:1.04rem;margin:0 0 12px}
+.lead strong{color:var(--accent)}
+.stats{list-style:none;padding:0;margin:24px 0 8px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:600px}
 .stats li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:.85rem;color:var(--muted);line-height:1.35}
 .stats strong{display:block;font-family:"Source Serif 4",Georgia,serif;font-size:1.6rem;color:var(--accent);line-height:1.2;margin-bottom:2px}
 .callout{background:var(--card);border-left:3px solid var(--accent2);padding:12px 16px;border-radius:0 8px 8px 0;margin:16px 0}
@@ -303,7 +311,7 @@ def page():
 <main class="wrap">
   <section>
     {h2("Profil", "Profile", "profile")}
-    {bi(*PROFILE, tag="p", cls="lead")}
+    {profile()}
     {stats()}
   </section>
   <section>
